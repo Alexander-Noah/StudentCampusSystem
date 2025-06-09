@@ -1,0 +1,34 @@
+1. 登录注册模块（login_module）
+功能：实现用户登录、注册及身份验证。
+核心文件：
+login.java：登录界面，验证逻辑调用User.java。
+Register.java：注册界面，注册成功后向User.java的用户列表添加数据。
+User.java：用户数据模型（用户名、密码、身份、班级）。
+引用关系：
+login.java → User.java（验证用户信息）。
+Register.java → User.java（新增用户）。
+2. 学生功能模块（student_module）
+功能：学生打卡、请假申请。
+核心文件：
+ClockIn.java：打卡界面，根据用户 ID（学生为 0）显示课程打卡状态。
+LeaveApplication.java：请假申请界面，提交后跳转至主 UI。
+引用关系：
+ClockIn.java → UI.java（主界面）。
+LeaveApplication.java → UI.java（返回主界面）。
+3. 教师功能模块（teacher_module）
+功能：请假审批、通知查看。
+核心文件：
+StudentLeaveApprovalSystem.java：请假审批界面，教师审批学生申请。
+NotificationModule.java：通知模块，显示系统通知。
+引用关系：
+StudentLeaveApprovalSystem.java → UI.java（返回主界面）。
+NotificationModule.java → ShowMessage.java（返回信息页）。
+4. 公共组件模块（common_module）
+功能：主界面 UI、课程表、信息显示等通用功能。
+核心文件：
+UI.java：主界面菜单，根据用户身份（ID）显示不同功能项。
+Curriculum.java：课程表界面，显示课程信息。
+ShowMessage.java：学生 / 教师信息显示页面，跳转至课程表或通知。
+引用关系：
+UI.java → 所有模块（根据 ID 调用对应功能）。
+ShowMessage.java → Curriculum.java / NotificationModule.java。

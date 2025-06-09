@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class Demo1 {
     public static void main(String[] args) {
-        // 创建 Scanner 对象用于读取键盘输入
+        // 创建 Io 对象用于读取键盘输入
         Scanner scanner = new Scanner(System.in);
 
         // 提示用户输入字符串
@@ -19,7 +19,7 @@ public class Demo1 {
         // 输出结果
         System.out.println(result);
 
-        // 关闭 Scanner
+        // 关闭 Io
         scanner.close();
     }
 
