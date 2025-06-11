@@ -75,7 +75,7 @@ import java.awt.event.ActionListener;
         //关闭窗口程序停止
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         //设置背景图片
-        ImageIcon icon = new ImageIcon("E:\\java\\JAVA\\IDEAJAVA\\StudentCampusSystem\\src\\resources\\background.jpg");
+        ImageIcon icon = new ImageIcon("src\\resources\\background.jpg");
         JLabel p = new JLabel(icon);
         p.setBounds(0, 0, 900, 600);
         this.add(p);

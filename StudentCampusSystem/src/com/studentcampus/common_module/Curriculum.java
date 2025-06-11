@@ -326,9 +326,9 @@ public class Curriculum extends JFrame {
     }
 
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            Curriculum frame = new Curriculum();
-        });
-    }
+//    public static void main(String[] args) {
+//        SwingUtilities.invokeLater(() -> {
+//            Curriculum frame = new Curriculum();
+//        });
+//    }
 }

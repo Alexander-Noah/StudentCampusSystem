@@ -169,10 +169,10 @@ public class ShowMessage extends JFrame {
         this.setResizable(false);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            ShowMessage frame = new ShowMessage();
-            frame.setVisible(true);
-        });
-    }
+//    public static void main(String[] args) {
+//        SwingUtilities.invokeLater(() -> {
+//            ShowMessage frame = new ShowMessage();
+//            frame.setVisible(true);
+//        });
+//    }
 }

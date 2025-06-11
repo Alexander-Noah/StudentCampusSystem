@@ -135,8 +135,8 @@ public class NotificationModule extends JFrame {
     /**
      * 主方法：启动应用程序
      */
-    public static void main(String[] args) {
-        // 使用事件分发线程创建并显示GUI
-        SwingUtilities.invokeLater(NotificationModule::new);
-    }
+//    public static void main(String[] args) {
+//        // 使用事件分发线程创建并显示GUI
+//        SwingUtilities.invokeLater(NotificationModule::new);
+//    }
 }

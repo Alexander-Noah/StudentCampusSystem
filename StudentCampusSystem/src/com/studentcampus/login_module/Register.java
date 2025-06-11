@@ -19,6 +19,7 @@ public class Register extends JFrame {
     private JPasswordField passwordText;
     private JPasswordField passwordText2;
     private JButton RegisterButton;
+    private JButton BackButton;
     private JLabel ClassTxt;
     private JComboBox<String> ChooseClass;
     private JComboBox<String> ChooseID;
@@ -117,7 +118,13 @@ public class Register extends JFrame {
         RegisterButton.setText("注册");
         RegisterButton.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
         contentPane.add(RegisterButton);
-        RegisterButton.setBounds(158, 315, 240, 35);
+        RegisterButton.setBounds(300, 315, 100, 35);
+
+        //---- 返回按钮 ----
+        BackButton.setText("返回");
+        BackButton.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
+        contentPane.add(BackButton);
+        BackButton.setBounds(100, 315, 100, 35);
 
         // 注册按钮点击事件
         RegisterButton.addActionListener(_ -> {
@@ -161,7 +168,7 @@ public class Register extends JFrame {
             // Register.java 中的注册逻辑
             JOptionPane.showMessageDialog(this, "注册成功！", "提示", JOptionPane.INFORMATION_MESSAGE);
             login.userList.add(new User(user, pass1, role, clazz)); // 添加用户到登录模块的用户列表
-// 清空输入框
+            // 清空输入框
             UserField.setText("");
             passwordText.setText("");
             passwordText2.setText("");
@@ -172,6 +179,12 @@ public class Register extends JFrame {
             // 关闭注册窗口，跳转到登录窗口
             this.dispose(); // 关闭当前窗口
             new login();    // 打开登录窗口
+        });
+
+        // 返回按钮点击事件
+        BackButton.addActionListener(_ -> {
+            new login();
+            this.dispose();
         });
 
 
@@ -202,15 +215,14 @@ public class Register extends JFrame {
         ChooseClass = new JComboBox<>();
         //注册按钮
         RegisterButton = new JButton();
+        //返回按钮
+        BackButton = new JButton();
         //设置界面大小
         this.setBounds(100, 100, 500, 420);
         //取消默认的布局
         this.getContentPane().setLayout(null);
         //禁止调整界面大小
         this.setResizable(false);
-    }
-    public static void main() {
-        SwingUtilities.invokeLater(Register::new);
     }
 }
 

@@ -485,8 +485,8 @@ public class StudentLeaveApprovalSystem extends JFrame {
         public void setStatus(String status) { this.status = status; }
     }
 
-    public static void main(String[] args) {
-        // Use the event dispatch thread to build and show the UI
-        SwingUtilities.invokeLater(() -> new StudentLeaveApprovalSystem());
-    }
+//    public static void main(String[] args) {
+//        // Use the event dispatch thread to build and show the UI
+//        SwingUtilities.invokeLater(() -> new StudentLeaveApprovalSystem());
+//    }
 }
